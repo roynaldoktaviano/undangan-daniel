@@ -22,8 +22,6 @@ Route::get('/content', function () {
     $pesan = DB::table('pesans')->get();
     return Inertia::render('Welcome', [
         'pesan' => $pesan,
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
